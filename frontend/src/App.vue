@@ -1,18 +1,26 @@
 <template>
-  <div>
-    <router-view />    
+  <div class="main-container" >
+    <Sidebar />
+    <div>
+      <Navbar />
+      <router-view />    
+    </div>  
   </div>
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue';
+import Sidebar from './components/Sidebar.vue';
+
 
 export default {
-  data: function() {
-    return {
-      logo_src: "/img/logo.png",
-      app_name: "cachforce"
-    }
-  }
+    data: function () {
+        return {
+            logo_src: "/img/logo.png",
+            app_name: "cachforce"
+        };
+    },
+    components: { Navbar, Sidebar }
 }
 </script>
 
@@ -25,14 +33,9 @@ export default {
   }
 
   .main-container {
-    margin: 50px;
-    min-height: 250px;
+    display: flex;
+    flex-direction: row;
+    width: 100vh;
   }
 
-  h1 {
-    text-align: center;
-    font-size: 42px;
-    margin-bottom: 30px;
-    color: #222;
-  }
 </style>
