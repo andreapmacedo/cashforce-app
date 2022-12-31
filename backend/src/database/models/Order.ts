@@ -1,21 +1,39 @@
 // import * as Sequelize from 'sequelize';
-import { INTEGER, STRING, Model } from 'sequelize';
+import { INTEGER, STRING, DATE, Model } from 'sequelize';
 import db from '.';
 
 class Order extends Model {
-  id?: number;
-  orderNumber: string;
+  nNf: string;
+  value: string;
+  buyerID: number;
+  providerID: number;
+  orderStatusBuyer: string;
+  createdAt: Date;
 }
 
 Order.init({
-  id: {
+  nNf: {
+    type: STRING,
+    allowNull: false,
+  },
+  value: {
+    type: STRING,
+    allowNull: false,
+  },
+  buyerID: {
     type: INTEGER,
     allowNull: false,
-    primaryKey: true,
-    autoIncrement: true,
   },
-  orderNumber: {
+  providerID: {
+    type: INTEGER,
+    allowNull: false,
+  },
+  orderStatusBuyer: {
     type: STRING,
+    allowNull: false,
+  },
+  createdAt: {
+    type: DATE,
     allowNull: false,
   },
 }, {

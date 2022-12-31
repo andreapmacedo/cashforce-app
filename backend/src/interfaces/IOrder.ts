@@ -1,4 +1,8 @@
 export interface IOrder {
-  id?: number;
-  orderNumber: string;
+  nNf: string;
+  value: string;
+  buyerID: number;
+  providerID: number;
+  orderStatusBuyer: string;
+  createdAt: Date;
 }
