@@ -1,6 +1,7 @@
-// import * as Sequelize from 'sequelize';
 import { INTEGER, STRING, DATE, Model } from 'sequelize';
 import db from '.';
+import Buyer from './Buyer';
+import Provider from './Provider';
 
 class Order extends Model {
   nNf: string;
@@ -37,11 +38,17 @@ Order.init({
     allowNull: false,
   },
 }, {
-  sequelize: db, // db é ums instancia de sequelize (está no arquivo index.ts). O sequelize é o que vai fazer a conexão com o banco de dados.
-  modelName: 'orders', // Nome da tabela.
-  underscored: false, // Se os campos da tabela serão separados por underline (caso seja camelCase, o sequelize vai entender que é um campo separado).
-  timestamps: false, // Se vai ter os campos de created_at e updated_at seria necessário colocar true.
+  sequelize: db, 
+  modelName: 'orders', 
+  underscored: false, 
+  timestamps: false, 
 });
+
+Buyer.hasMany(Order, { foreignKey: 'buyerID', as: 'buyerID' });
+Provider.hasMany(Order, { foreignKey: 'providerID', as: 'providerID' });
+
+Order.belongsTo(Buyer, { foreignKey: 'buyerID', as: 'buyer' });
+Order.belongsTo(Provider, { foreignKey: 'providerID', as: 'provider' });
 
 export default Order;
 
