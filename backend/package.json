@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/andreapmacedo/cashforce-app#readme",
   "dependencies": {
+    "@types/cors": "^2.8.13",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql2": "^2.3.3",
