@@ -17,11 +17,12 @@
   #nav {
     /* background-color: #222; */
     border-bottom: 1px solid #111;
-    padding: 15px 50px;
+    /* border: 1px solid #111; */
+    /* padding: 15px 50px; */
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100vh;
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    /* width: 100vh; */
     height: 70px;
   }
 

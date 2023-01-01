@@ -76,4 +76,35 @@ export default {
   padding: 20px;
 }
 
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+}
+th {
+  text-align: left;
+  /* padding: 10px; */
+  /* width: fit-content; */
+  width: 200px;
+  /* width: 18%; */
+  /* background-color: blue; */
+}
+
+tr {
+  /* background-color: antiquewhite; */
+  border: 1px solid #111;
+}
+
+td {
+  
+  /* background-color: aqua; */
+  
+}
+
 </style>
