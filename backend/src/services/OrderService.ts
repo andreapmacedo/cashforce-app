@@ -4,7 +4,6 @@ import Provider from '../database/models/Provider';
 import Order from '../database/models/Order';
 import { IOrder } from './../interfaces/IOrder';
 
-
 export default class OrderModel {
   constructor(private _model: typeof Order = Order) {}
 
@@ -21,12 +20,5 @@ export default class OrderModel {
 
     return result;
   }
-
-  async findOne(id: number): Promise<IOrder | null> {   
-    const result = await this._model.findByPk(Number(id));
-    if (!result) throw new CustomError(401, 'Invalid id');
-    return result;
-  }
-
 
 }
