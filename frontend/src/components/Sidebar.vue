@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     width: 288px ;
-    height: 100vh;
+    height: 900px;
   }
 
 </style>

@@ -33,9 +33,12 @@ export default {
   }
 
   .main-container {
+
     display: flex;
     flex-direction: row;
-    /* width: 100vh; */
+    width: calc(1560px - 288px) ;
+    height: calc(900px - 64px);
+    position: relative;
   }
 
 </style>
