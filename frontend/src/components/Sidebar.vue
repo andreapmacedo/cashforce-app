@@ -3,7 +3,7 @@
     <div id="nav">
       <img :src="logo" :alt="alt" id="logo"  />
       <div class="menu-container">
-        <ItemMenu :icon="icon" :title="title" :selected="selected" />
+        <ItemMenu v-for="({icon, title, selected}) in menuItems" :key="title" :icon="icon" :title="title" :selected="selected" />
       </div>
     </div>
   </div>
@@ -17,9 +17,13 @@
     props: ["logo", "alt"],
     data(){
       return { 
-        icon: "/img/icon-1.svg",
-        title: "Notas fiscais",
-        selected: true
+        menuItems: [
+          {
+            icon: "/img/icon-1.svg",
+            title: "Notas fiscais",
+            selected: true
+          }
+        ]
       }
     },
     components: { ItemMenu }
@@ -44,8 +48,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    height: 100%;
-    
+    height: 100%; 
   }
 
 </style>
