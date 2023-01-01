@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import App from './App.vue'
-// import Home from './views/HomeView.vue'
 import Statement from './views/StatementView.vue'
 
 const router = createRouter({  

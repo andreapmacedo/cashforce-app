@@ -35,7 +35,7 @@ export default {
   .main-container {
     display: flex;
     flex-direction: row;
-    width: 100vh;
+    /* width: 100vh; */
   }
 
 </style>
