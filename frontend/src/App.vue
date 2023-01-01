@@ -1,8 +1,8 @@
 <template>
   <div class="main-container" >
-    <Sidebar />
+    <Sidebar :logo="logo_src" :alt="app_name" />
     <div>
-      <Navbar />
+      <Navbar  />
       <router-view />    
     </div>  
   </div>
@@ -14,10 +14,10 @@ import Sidebar from './components/Sidebar.vue';
 
 
 export default {
-  data: function () {
+  data() {
     return {
-      logo_src: "/img/logo.png",
-      app_name: "cachforce"
+      logo_src: "/img/logo.svg",
+      app_name: "cachforce",
     };
   },
   components: { Navbar, Sidebar }

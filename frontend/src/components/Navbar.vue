@@ -17,6 +17,7 @@
   #nav {
     display: flex;
     height: 64px;
+    border-bottom: 1px solid #DFE2EB;
   }
 
 </style>
