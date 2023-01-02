@@ -6,3 +6,12 @@ export interface IOrder {
   orderStatusBuyer: string;
   createdAt: Date;
 }
+
+export interface IOrderResponse {
+  nNf: string;
+  value: string;
+  orderStatusBuyer: string;
+  createdAt: Date;
+  buyer: object;
+  provider: object;
+}
