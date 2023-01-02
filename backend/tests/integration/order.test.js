@@ -1,6 +1,6 @@
 const chai = require('chai');
-
 const chaiHttp = require('chai-http');
+// import { data } from './mock/data.js';
 
 chai.use(chaiHttp);
 
@@ -46,4 +46,13 @@ describe('testa a api cashforce', () => {
         done();
       });
   });
+
+  // it("deve retornar a lista completa de pedidos. ", (done) => {
+  //   chai.request(api)
+  //     .get(route)
+  //     .end((_err, res) => {
+  //       expect(res.body).to.deep.equal(dataMock);
+  //       done();
+  //     });
+  // });
 });
