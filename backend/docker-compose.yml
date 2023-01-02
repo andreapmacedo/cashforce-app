@@ -1,0 +1,123 @@
+# version: '3'
+# services:
+#   backend:
+#     # container_name: cashforce_backend
+#     # build: ./backend
+#     # platform: linux/x86_64
+#     # working_dir: /home/node/app
+#     # tty: true
+#     # # Mesmo que `docker run -i`
+#     # stdin_open: true
+#     # # Substitui o comando padrão da imagem do node
+#     # command: bash
+#     # # Restarta a imagem caso algo a faça parar
+#     # restart: always    
+    
+#     # volumes:
+#     #   - ./:/home/node/app
+
+#     # depends_on:
+#     #   - db
+#     # ports:
+#     #   - 3001:3001
+
+#     # environment:
+#     #   MYSQL_USER: root
+#     #   MYSQL_PASSWORD: docker
+#     #   MYSQL_HOST: db # Nome do service logo abaixo
+#     #   MYSQL_DATABASE: cashforce
+#     #   PORT: '3001'
+#   # node:
+#     image: node:16.14
+#     container_name: cashforce_backend
+#     # build: ./backend
+#     tty: true
+#     stdin_open: true
+#     command: bash
+#     restart: always
+#     working_dir: /home/node/app/backend
+#     volumes:
+#       - ./:/home/node/app/backend
+#     depends_on:
+#       - db
+#     ports:
+#       - 3001:3001
+#     environment:
+#       MYSQL_USER: root
+#       MYSQL_PASSWORD: docker
+#       MYSQL_HOST: db # Nome do service logo abaixo
+#       MYSQL_DATABASE: cashforce
+#       PORT: '3001'
+
+
+#   db:
+#     container_name: cashforce_db
+#     image: mysql:5.7
+#     environment:
+#       MYSQL_ROOT_PASSWORD: 'docker'
+#       MYSQL_DATABASE: cashforce
+#     ports:
+#       - 3306:3306
+#     platform: linux/x86_64
+#     restart: 'always'
+
+# networks:
+#   # Rede padrão, criada automaticamente
+#   default:
+#     name: cashforce_net
+
+version: "3"
+
+services:
+  # Serviço que irá rodar o node
+  node:
+    # Imagem base do container
+    image: node:16.14
+    # Nome do container para facilitar execução
+    container_name: cashforce-app_node
+    # Mesmo que `docker run -t`
+    tty: true
+    # Mesmo que `docker run -i`
+    stdin_open: true
+    # Substitui o comando padrão da imagem do node
+    command: bash
+    # Restarta a imagem caso algo a faça parar
+    restart: always
+    # Diretório padrão de execução
+    working_dir: /home/node/app
+    # Lista de volumes (diretórios) mapeados de fora para dentro do container
+    volumes:
+      # Monta o diretório atual, com todos os dados do projeto, 
+      # dentro do diretório /app
+      - ./:/home/node/app
+    # Lista de serviços do qual este serviço depende
+    depends_on:
+      # Precisa do banco funcionando antes de subir o node
+      - db
+    # Lista de portas mapeadas de dentro para fora do container
+    ports:
+      # Expõe a porta padrão da aplicação: altere aqui caso use outra porta
+      - 3001:3001
+    # Configura as variáveis de ambiente dentro do container
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: docker
+      MYSQL_HOST: db # Nome do service logo abaixo
+      MYSQL_DATABASE: cashforce
+      PORT: '3001'
+
+  # Serviço que irá rodar o banco de dados
+  db:
+    container_name: cashforce-app_db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 'docker'
+      MYSQL_DATABASE: cashforce
+    ports:
+      - 3306:3306
+
+# Lista de redes que os containeres irão utilizar
+networks:
+  # Rede padrão, criada automaticamente
+  default:
+    name: cashforce_net

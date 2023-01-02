@@ -1,0 +1,36 @@
+# version: "3"
+
+# services:
+#   node:
+#     image: node:16.14
+#     container_name: cashforce-app_node
+#     tty: true
+#     stdin_open: true
+#     command: bash
+#     restart: always
+#     working_dir: /home/node/app
+#     volumes:
+#       - ./:/home/node/app
+#     depends_on:
+#       - db
+#     ports:
+#       - 3001:3001
+#     environment:
+#       MYSQL_USER: root
+#       MYSQL_PASSWORD: docker
+#       MYSQL_HOST: db # Nome do service logo abaixo
+#       MYSQL_DATABASE: cashforce
+#       PORT: '3001'
+
+#   db:
+#     container_name: cashforce-app_db
+#     image: mysql:5.7
+#     environment:
+#       MYSQL_ROOT_PASSWORD: 'docker'
+#       MYSQL_DATABASE: cashforce
+#     ports:
+#       - 3306:3306
+
+# networks:
+#   default:
+#     name: cashforce_net
