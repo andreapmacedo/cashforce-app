@@ -1,7 +1,7 @@
 import { RequestHandler } from 'express';
 import OrderService from '../services/OrderService';
 
-export default class TeamController {
+export default class OrderController {
   constructor(private service: OrderService = new OrderService()) {}
 
   findAll: RequestHandler = async (_req, res, next) => {
