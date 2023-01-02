@@ -2,8 +2,11 @@
   "name": "cashforce-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/server",
   "scripts": {
+    "build": "/bin/sh tsc_eval.sh",
+    "prestart": "npm run build",
+    "start": "node .",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "test": "mocha tests/**/*.test.js --exit"
   },
