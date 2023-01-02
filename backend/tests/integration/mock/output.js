@@ -1,4 +1,4 @@
-export const data =  [
+[
 	{
 		"nNf": "18153",
 		"value": "198450",
