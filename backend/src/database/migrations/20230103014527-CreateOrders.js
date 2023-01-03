@@ -19,6 +19,7 @@ module.exports = {
       buyerID: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        field: 'buyerId',
         references: {
           model: 'buyers',
           key: 'id',
@@ -27,8 +28,9 @@ module.exports = {
       providerID: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        field: 'providerId',
         references: {
-          model: 'buyers',
+          model: 'providers',
           key: 'id',
         },
       },
