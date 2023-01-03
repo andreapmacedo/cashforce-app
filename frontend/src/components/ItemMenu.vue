@@ -1,7 +1,7 @@
 <template>
     <div class="item-container">
       <section v-if="selected" id="selected"></section>
-      <div id="item-menu">
+      <div id="item-menu" @click="click">
         <img :src="icon" :alt="title" id="icon"/>
         <p>{{ title }}</p>      
       </div>
@@ -21,16 +21,14 @@
     flex-direction: row;
     align-content: center;
     align-items: center;
-    width: 100%;
+    width: 260px;
     height: 44px;
     margin-left: 25px;
     gap: 10px;
   }
 
   p {
-    color: #00AD8C;
     font-family: 'DM Sans';
-    font-size: 14px;
     font-weight: 500;
   }
 
@@ -50,6 +48,18 @@
   .item-container {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #00AD8C;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .item-container:hover {
+    transition: 0.3s;
+    font-size: 15px;
+    padding-left: 15px;
+    color: #021b51;
   }
 
   </style>

@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-
     <div class="page-header">
       <span>
         <img src="/img/icon-2.svg" alt="alt" />
@@ -37,7 +36,6 @@
         </tbody>
       </table>
     </div>
-
   </div>
 </template>
 
@@ -48,7 +46,6 @@ moment.locale('pt-br');
 
 export default {
   name: 'Statement',
-  // props: ["icon", "alt"],
   data() {
     return {
       data: [],
@@ -82,13 +79,9 @@ export default {
     this.getStatement();
   },
 }
-
-
 </script>
 
-
 <style scoped>
-
 .main {
   display : flex;
   flex-direction: column;
@@ -181,7 +174,6 @@ td:nth-child(5), td:nth-child(6)  {
   Width: 165px;
   height: 32px;
   margin-right: 8px;
-  /* padding: 8px 29px; */
 }
 
 span {

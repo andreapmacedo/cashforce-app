@@ -1,4 +1,3 @@
-import CustomError from '../interfaces/CustomError';
 import Buyer from '../database/models/Buyer';
 import Provider from '../database/models/Provider';
 import Order from '../database/models/Order';

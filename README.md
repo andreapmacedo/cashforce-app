@@ -19,6 +19,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 * Utilizar o framework chai para testes de integração.
 * Utilizar o framework swagger para documentação da API.
 * Utilizar o docker para construir o ambiente de desenvolvimento.
+* Aplicar o conceito de TDD, clean code, SOLID, POO e arquitetura de camadas.
 
 ## :hammer: Ferramentas
 
@@ -37,17 +38,27 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 <details>
   <summary markdown="span"><strong>Via Docker Compose (Recomendado)</strong></summary><br />
 
-  :warning:  **É necessário ter o Docker e o Docker Compose instalados na máquina.**
+  #### :warning:  Atenção
+  - **É necessário ter o Docker e o Docker Compose instalados na máquina.**
+  - **É necessário que as portas 8080 e 3001 estejam desocupadas.**
 
   > Após clonar o repositório, sequir os sequintes passos.
 
-  :whale2:
-  **Subindo os containers com as imagens**
+  <br />
+
+  :whale2: **Subindo os containers com as imagens**
 
   - Acessar o diretório raiz do projeto e execute o seguinte comando:
   ```bash
   docker-compose up --build
   ```
+- OBS.: 
+  - Este comando irá rodar as migrations e seeders automaticamente, removendo os dados anteriores.
+  - Os três containers serão criados e iniciados: backend, frontend e o db. 
+  - É importante executar o docker-compose **com** a flag ```--build``` para que as imagens sejam recriadas.
+  - É possível executar o docker-compose **sem** a flag ```-d``` para que o compose funcione corretamente.
+
+  <br />
 
   **Acessando a aplicação**
 
@@ -76,7 +87,9 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 <details>
   <summary markdown="span"><strong>Localmente</strong></summary><br />
 
-  :warning:  **É necessário ter o Node.js e o MySql instalados na máquina.**
+  #### :warning:  Atenção
+  - **É necessário ter o Node e o MySql instalados na máquina.**
+  - **É necessário que as portas 8080 e 3001 estejam desocupadas.**
   
   
   > Após clonar o repositório, seguir os seguintes passos.
@@ -106,6 +119,8 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
   - OBS: o arquivo example.env contém um exemplo de como deve ser o arquivo .env.
     - É necessário renomear o arquivo example.env para .env. e preencher as variáveis de ambiente conforme sua configuração.
 
+  <br />
+
   - Instalar as dependências.
   ```bash  
   npm install
@@ -115,6 +130,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
   ```bash  
   npm start
   ```
+    - OBS.: este comando irá rodar as migrations e seeders do banco de dados automaticamente, removendo os dados anteriores.
 
   <br />
 
@@ -145,7 +161,9 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 <details>
   <summary markdown="span"><strong>Localmente com o DB já presente</strong></summary><br />
 
-  :warning:  **É necessário ter o Node.js instalado na máquina.**
+  #### :warning:  Atenção
+  - **É necessário ter o Node e o MySql instalados na máquina.**
+  - **É necessário que as portas 8080 e 3001 estejam desocupadas.**
   
   > Após clonar o repositório, seguir os seguintes passos.
     
@@ -169,8 +187,10 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
   DB_PORT=3306
   ```
 
-    - OBS: o arquivo example.env contém um exemplo de como deve ser o arquivo .env.
-      - É necessário renomear o arquivo example.env para .env. e preencher as variáveis de ambiente conforme sua configuração.
+  - OBS: o arquivo example.env contém um exemplo de como deve ser o arquivo .env.
+    - É necessário renomear o arquivo example.env para .env. e preencher as variáveis de ambiente conforme sua configuração.
+
+  <br />
 
   - Instalar as dependências.
   ```bash  
@@ -181,6 +201,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
   ```bash  
   npm run dev
   ```
+  - OBS.: este comando NÃO irá rodar as migrations e seeders do banco de dados.
 
   <br />
 
@@ -215,7 +236,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 <details>
   <summary markdown="span"><strong>Rodando os testes</strong></summary><br />
 
-  > Após subir o back-end, executar os comandos abaixo.
+  > Após subir o back-end, seguir os seguintes passos.
   
   - Acessar o diretório do back-end.
   ```bash
