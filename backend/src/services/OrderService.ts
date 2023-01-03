@@ -22,11 +22,4 @@ export default class OrderModel {
     return result;
   }
 
-  async findOne(id: number): Promise<IOrder | null> {   
-    const result = await this._model.findByPk(Number(id));
-    if (!result) throw new CustomError(401, 'Invalid id');
-    return result;
-  }
-
-
 }
