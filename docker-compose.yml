@@ -1,10 +1,20 @@
 version: "3"
 
 services:
+  frontend:
+    container_name: app_frontend
+    build: ./frontend
+    image: cashforce-app-frontend
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      backend:
+        condition: service_healthy
   backend:
     container_name: app_backend
     build: ./backend
-    image: cashforce-app
+    image: cashforce-app-backend
     restart: always
     ports:
       - 3001:3001
