@@ -2,10 +2,11 @@
   "name": "cashforce-app",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/server",
+  "main": "./build/server",
   "scripts": {
     "build": "/bin/sh tsc_eval.sh",
-    "prestart": "npm run build",
+    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "prestart": "npm run build && npm run db:reset",
     "start": "node .",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "test": "mocha tests/**/*.test.js --exit"
