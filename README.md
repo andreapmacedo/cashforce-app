@@ -19,6 +19,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 * Utilizar o framework chai para testes de integração.
 * Utilizar o framework swagger para documentação da API.
 * Utilizar o docker para construir o ambiente de desenvolvimento.
+* Aplicar o conceito de TDD, clean code, SOLID, POO e arquitetura de camadas.
 
 ## :hammer: Ferramentas
 

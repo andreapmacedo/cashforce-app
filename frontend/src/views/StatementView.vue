@@ -48,7 +48,6 @@ moment.locale('pt-br');
 
 export default {
   name: 'Statement',
-  // props: ["icon", "alt"],
   data() {
     return {
       data: [],
