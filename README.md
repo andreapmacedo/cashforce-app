@@ -216,7 +216,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 <details>
   <summary markdown="span"><strong>Rodando os testes</strong></summary><br />
 
-  > Após subir o back-end, executar os comandos abaixo.
+  > Após subir o back-end, seguir os seguintes passos.
   
   - Acessar o diretório do back-end.
   ```bash

@@ -12,7 +12,6 @@
 import Navbar from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
 
-
 export default {
   data() {
     return {
@@ -33,7 +32,6 @@ export default {
   }
 
   .main-container {
-
     display: flex;
     flex-direction: row;
     width: calc(1560px - 288px) ;

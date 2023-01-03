@@ -28,9 +28,7 @@
   }
 
   p {
-    /* color: #00AD8C; */
     font-family: 'DM Sans';
-    /* font-size: 14px; */
     font-weight: 500;
   }
 
