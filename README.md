@@ -1,4 +1,4 @@
-# cashforce-app
+# :dollar: cashforce-app 
 
 
 ![cover](./cover.png)
@@ -41,7 +41,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 
   > Após clonar o repositório, sequir os sequintes passos.
 
-  
+  :whale2:
   **Subindo os containers com as imagens**
 
   - Acessar o diretório raiz do projeto e execute o seguinte comando:
