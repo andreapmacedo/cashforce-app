@@ -34,7 +34,9 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 * Typescript
 <br />
 <hr />
+
 ## :sparkles: Executando a aplicação
+
 <details>
   <summary markdown="span"><strong>Via Docker Compose (Recomendado)</strong></summary><br />
 
