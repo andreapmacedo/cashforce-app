@@ -57,7 +57,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 - OBS.: 
   - Este comando irá rodar as migrations e seeders automaticamente, removendo os dados anteriores.
   - Os três containers serão criados e iniciados: backend, frontend e o db. 
-  - É possível executar o docker-compose **sem** a flag ```-d``` para que o compose funcione corretamente.
+  - Executar o docker-compose **sem** a flag ```-d``` para que o compose funcione corretamente.
 
   <br />
 
