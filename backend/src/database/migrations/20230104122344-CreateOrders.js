@@ -16,7 +16,7 @@ module.exports = {
       value: {
         type: Sequelize.STRING
       },
-      buyerID: {
+      buyerId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         field: 'buyerId',
@@ -25,12 +25,30 @@ module.exports = {
           key: 'id',
         },
       },
-      providerID: {
+      providerId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         field: 'providerId',
         references: {
           model: 'providers',
+          key: 'id',
+        },
+      },
+      cnpjId: {
+        // allowNull: false,
+        type: Sequelize.INTEGER,
+        field: 'cnpjId',
+        references: {
+          model: 'cnpjs',
+          key: 'id',
+        },
+      },
+      userId: {
+        // allowNull: false,
+        type: Sequelize.INTEGER,
+        field: 'userId',
+        references: {
+          model: 'users',
           key: 'id',
         },
       },
