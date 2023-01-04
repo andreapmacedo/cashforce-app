@@ -6,8 +6,8 @@ import Provider from './Provider';
 class Order extends Model {
   nNf: string;
   value: string;
-  buyerID: number;
-  providerID: number;
+  buyerId: number;
+  providerId: number;
   orderStatusBuyer: string;
   createdAt: Date;
 }
@@ -21,11 +21,11 @@ Order.init({
     type: STRING,
     allowNull: false,
   },
-  buyerID: {
+  buyerId: {
     type: INTEGER,
     allowNull: false,
   },
-  providerID: {
+  providerId: {
     type: INTEGER,
     allowNull: false,
   },
@@ -44,11 +44,11 @@ Order.init({
   timestamps: false, 
 });
 
-Buyer.hasMany(Order, { foreignKey: 'buyerID', as: 'buyerID' });
-Provider.hasMany(Order, { foreignKey: 'providerID', as: 'providerID' });
+Buyer.hasMany(Order, { foreignKey: 'buyerId', as: 'buyerId' });
+Provider.hasMany(Order, { foreignKey: 'providerId', as: 'providerId' });
 
-Order.belongsTo(Buyer, { foreignKey: 'buyerID', as: 'buyer' });
-Order.belongsTo(Provider, { foreignKey: 'providerID', as: 'provider' });
+Order.belongsTo(Buyer, { foreignKey: 'buyerId', as: 'buyer' });
+Order.belongsTo(Provider, { foreignKey: 'providerId', as: 'provider' });
 
 export default Order;
 
