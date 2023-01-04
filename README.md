@@ -232,7 +232,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 <br />
 <hr />
 
-## :pushpin: testes de integração
+## :pushpin: Testes de integração
 <details>
   <summary markdown="span"><strong>Rodando os testes</strong></summary><br />
 
@@ -254,7 +254,7 @@ Aplicação para o processo seletivo da CashForce. A mesma consiste em uma pági
 <br />
 <hr />
 
-## :memo: consultando a documentação da API
+## :memo: Consultando a documentação da API
 <details>
   <summary markdown="span"><strong>Consultando a API</strong></summary><br />
 
