@@ -15,7 +15,7 @@ export default class OrderModel {
 
     const result = await this._model.findAll({ 
       include: ASSOCIATIONS,
-      attributes: { exclude: ['id', 'buyerID', 'providerID'] }
+      attributes: { exclude: ['id', 'buyerId', 'providerId'] }
     });
 
     return result;
